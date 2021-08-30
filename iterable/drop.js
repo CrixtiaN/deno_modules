@@ -30,7 +30,7 @@ export function* drop(iterable, amount) {
  * @param {(value: T) => boolean} fn
  * @returns {Generator<T, void, unknown>}
  */
- export function* dropWhile(
+export function* dropWhile(
   iterable,
   fn,
 ) {

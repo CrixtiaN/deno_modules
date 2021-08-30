@@ -1,0 +1,17 @@
+{
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": false,
+  "deno.suggest.imports.hosts": {
+    "https://deno.land": true
+  },
+  "deno.codeLens.implementations": false,
+  "deno.codeLens.references": false,
+  "deno.codeLens.referencesAllFunctions": false,
+  "deno.codeLens.testArgs": [
+    "--allow-all"
+  ],
+  "deno.suggest.imports.autoDiscover": true,
+  "deno.codeLens.test": true,
+  "deno.config": "./tsconfig.json"
+}

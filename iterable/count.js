@@ -3,9 +3,9 @@
 /** @typedef {Generator<number, void, unknown>} NumberGenerator */
 
 /**
- * @param {number} start 
+ * @param {number} start
  * @param {number} step
- * @returns {NumberGenerator} 
+ * @returns {NumberGenerator}
  */
 export function* count(start = 0, step = 1) {
   if (step === 0) {
