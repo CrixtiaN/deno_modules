@@ -1,19 +1,22 @@
+// This module is browser compatible.
+
 import { take } from "./take.js";
 import { count } from "./count.js";
 
-// export function range(stop: number): Generator<number, void>;
-// export function range(
-//   start: number,
-//   stop: number,
-//   step?: number,
-// ): Generator<number, void>;
+/** @typedef {Generator<number, void, unknown>} NumberGenerator */
+
+/** @typedef {{
+ *  (stop: number): NumberGenerator;
+ *  (start: number, stop: number, step?: number): NumberGenerator;
+ * }} RangeGenerator */
+
 /**
- * @param {number} start 
- * @param {number} stop 
- * @param {number} step 
- * @returns {Generator<number, void, unknown>}
+ * @param {number} start
+ * @param {number} stop
+ * @param {number} step
+ * @returns {NumberGenerator}
  */
-export function* range(start, stop = start, step = 1) {
+function* _range(start, stop = start, step = 1) {
   if (step === 0) {
     throw new Error("argument `step` must be different than zero");
   }
@@ -26,3 +29,6 @@ export function* range(start, stop = start, step = 1) {
   const amount = Math.ceil(Math.abs((stop - start) / step));
   yield* take(count(start, step), amount);
 }
+
+/** @type {RangeGenerator} */
+export const range = _range;

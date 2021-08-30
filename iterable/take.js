@@ -1,11 +1,5 @@
 // This module is browser compatible.
 
-// <reference types="./types.d.ts"/>
-/**
- * template T
- * typedef {import("./types.d.ts").IterableObject<T>} IterableObject
- */
-
 /**
  * @template T
  * @typedef {Iterable<T> | IterableIterator<T>} IterableObject
@@ -48,14 +42,3 @@ export function* takeWhile(iterable, fn) {
     yield item;
   }
 }
-
-// /** @type {Array<number>} */
-// const a = [1];
-// const i = function* () {
-//   yield true;
-//   yield false;
-// };
-// const iter = i();
-
-// /** type {Generator<number>} */
-// const t = take(iter, 2);

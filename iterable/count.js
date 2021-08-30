@@ -1,7 +1,11 @@
+// This module is browser compatible.
+
+/** @typedef {Generator<number, void, unknown>} NumberGenerator */
+
 /**
  * @param {number} start 
  * @param {number} step
- * @returns {Generator<number, void, unknown>} 
+ * @returns {NumberGenerator} 
  */
 export function* count(start = 0, step = 1) {
   if (step === 0) {

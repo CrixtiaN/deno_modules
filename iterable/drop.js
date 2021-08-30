@@ -1,11 +1,5 @@
 // This module is browser compatible.
 
-// <reference types="./types.d.ts"/>
-/**
- * template T
- * typedef {import("./types.d.ts").IterableObject<T>} IterableObject
- */
-
 /**
  * @template T
  * @typedef {Iterable<T> | IterableIterator<T>} IterableObject
